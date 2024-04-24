@@ -11,8 +11,9 @@ public class Controller extends AbstractController {
   private final ArrayList<IObserver> observers;
 
   private Controller() {
-    this.model = new Model(10);
+    this.model = Model.getModelInstance();
     this.observers = new ArrayList<>();
+    model.attach(this);
   }
 
   public static AbstractController getControllerInstance() {
@@ -20,24 +21,25 @@ public class Controller extends AbstractController {
   }
 
   @Override
-  public void setStatus(EStatus status) throws Exception {
+  public void setStatus(EStatus status) {
     model.setStatus(status);
     notifyObserver();
   }
 
   @Override
-  public void setCellStatus(int x, int y, boolean state) throws Exception {
+  public void setCellStatus(int x, int y, boolean state) {
     model.setCellState(x, y, state);
   }
 
   @Override
-  public void setSize(int size) throws Exception {
+  public void setSize(int size) {
     model.setSize(size);
   }
 
   @Override
-  public void setTime(int time) throws Exception {
+  public void setTime(int time) {
     model.setTime(time);
+    System.out.println("Time: " + time);
   }
 
   @Override
@@ -47,7 +49,7 @@ public class Controller extends AbstractController {
 
   @Override
   public int getCountDown() {
-    return 0;
+    return model.getCountDown();
   }
 
   @Override
@@ -69,7 +71,7 @@ public class Controller extends AbstractController {
 
   @Override
   public void update() {
-
+    notifyObserver();
   }
 }
 

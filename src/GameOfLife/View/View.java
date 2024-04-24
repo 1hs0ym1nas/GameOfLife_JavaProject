@@ -17,6 +17,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
@@ -24,15 +25,23 @@ import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 
 public class View implements IObserver {
-  private final JFrame view = new JFrame("This is the home window");
+
   private final AbstractController controller = Controller.getControllerInstance();
   private static View instance = null;
   private JButton startButton;
   private JButton pauseButton;
   private JButton restartButton;
+  private JSpinner sizeSpinner;
+  private JSpinner timeSpinner;
+  private JLabel currentGeneration;
+  private JLabel countDown;
 
   private View() {
     controller.attach(this);
+
+    // Create a frame
+    JFrame view = new JFrame("This is the home window");
+
     JPanel buttons =  createButtons();
     JPanel inputs = createTexts();
 
@@ -73,13 +82,13 @@ public class View implements IObserver {
       @Override
       public void actionPerformed(ActionEvent e) {
         try {
-          if (controller.getStatus() == EStatus.OVER) {
-            controller.setStatus(EStatus.SEED);
-          } else {
-            controller.setStatus(EStatus.RUNNING);
+          if (controller.getStatus() == EStatus.SEED) {
+            controller.setTime((int) timeSpinner.getValue());
+            controller.setSize((int) sizeSpinner.getValue());
           }
+          controller.setStatus(EStatus.RUNNING);
         } catch (Exception error) {
-          //throw new RuntimeException(ex);
+          JOptionPane.showMessageDialog(null, error, "Error", JOptionPane.ERROR_MESSAGE);
         }
       }
     });
@@ -118,16 +127,16 @@ public class View implements IObserver {
     JPanel textPanel = new JPanel(new GridLayout(4, 1));
 
     // Create spinner for size and time
-    JSpinner sizeSpinner = new JSpinner(new SpinnerNumberModel(0, 0, 100, 1));
-    JSpinner timeSpinner = new JSpinner(new SpinnerNumberModel(0, 0, 60, 1));
+    sizeSpinner = new JSpinner(new SpinnerNumberModel(0, 0, 100, 1));
+    timeSpinner = new JSpinner(new SpinnerNumberModel(0, 0, 60, 1));
 
     // Create label for prompts
-    JLabel currentGeneration = new JLabel("2");
+    currentGeneration = new JLabel("2");
     currentGeneration.setBackground(Color.white);
     currentGeneration.setBorder(BorderFactory.createLineBorder(Color.GRAY, 1));
     currentGeneration.setOpaque(true);
 
-    JLabel countDown = new JLabel("10");
+    countDown = new JLabel("10");
     countDown.setBackground(Color.white);
     countDown.setBorder(BorderFactory.createLineBorder(Color.GRAY, 1));
     countDown.setOpaque(true);
@@ -162,7 +171,6 @@ public class View implements IObserver {
       panel.add(rowPanel);
     }
 
-
     return panel;
   }
 
@@ -182,28 +190,43 @@ public class View implements IObserver {
   }
 
   public void update() {
-    // Disable buttons based on the game status
+    // Disable buttons and spinners based on the game status
     if (controller.getStatus() == EStatus.SEED) {
       // When the game is waiting for user input
       // the stop button should be disabled
       startButton.setEnabled(true);
       pauseButton.setEnabled(false);
+      restartButton.setEnabled(true);
+      timeSpinner.setEnabled(true);
+      sizeSpinner.setEnabled(true);
     } else if (controller.getStatus() == EStatus.RUNNING) {
       // If the game is running
       // the start button should be disabled
-      System.out.println("Game is running");
       startButton.setEnabled(false);
       pauseButton.setEnabled(true);
+      restartButton.setEnabled(false);
+      timeSpinner.setEnabled(false);
+      sizeSpinner.setEnabled(false);
     } else if (controller.getStatus() == EStatus.PAUSE) {
       // If the game is paused
       // the stop button should be disabled
       startButton.setEnabled(true);
       pauseButton.setEnabled(false);
+      restartButton.setEnabled(true);
+      timeSpinner.setEnabled(false);
+      sizeSpinner.setEnabled(false);
     } else if (controller.getStatus() == EStatus.OVER) {
       // When the game is over
       // user should restart the game
       startButton.setEnabled(false);
       pauseButton.setEnabled(false);
+      restartButton.setEnabled(true);
+      timeSpinner.setEnabled(false);
+      sizeSpinner.setEnabled(false);
     }
+
+    // Update the current generation and count down
+    currentGeneration.setText(String.valueOf(controller.getGeneration()));
+    countDown.setText(String.valueOf(controller.getCountDown()));
   }
 }

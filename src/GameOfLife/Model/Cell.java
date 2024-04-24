@@ -2,43 +2,38 @@ package GameOfLife.Model;
 
 public class Cell implements ICell {
   private boolean state;
-  private boolean nextState;
 
   public Cell() {
     this.state = false; // By default, the cell is dead
-    this.nextState = false;
   }
 
   @Override
   public void setState(boolean newState) {
     this.state = newState;
-    this.nextState = newState;
   }
 
   @Override
-  public int countNeighboring(boolean[][] grid, int x, int y) {
-    int count = 0;
-    for (int i = -1; i <= 1; i++) {
-      for (int j = -1; j <= 1; j++) {
-        if (i == 0 && j == 0) continue; // Skip the cell itself
-        int dx = x + i;
-        int dy = y + j;
-        if (dx >= 0 && dx < grid.length && dy >= 0 && dy < grid[dx].length && grid[dx][dy]) {
-          count++;
+  public void updateState(int x, int y, boolean[][] grid) {
+    int neighbors = 0;
+
+    // Coordinates of the neighbors
+    int[] neighborsXs = {x + 1, x , x - 1};
+    int[] neighborsYs = {y + 1, y , y - 1};
+
+    // Find the number of neighbors based on the coordinates
+    for (int neighborsX : neighborsXs) {
+      for (int neighborsY : neighborsYs) {
+        if ((neighborsX >= 0 && neighborsX < grid.length) // X is in bounds
+            && (neighborsY >= 0 && neighborsY < grid[neighborsX].length) // Y is in bounds
+            && grid[neighborsX][neighborsY] // Cell is alive
+            && (neighborsX != x && neighborsY != y) // Cell is not itself
+        ) {
+          neighbors++;
         }
       }
     }
-    return count;
-  }
 
-  @Override
-  public void setAlive(int neighbors) {
-    nextState = (state && (neighbors == 2 || neighbors == 3)) || (!state && neighbors == 3);
-  }
-
-  @Override
-  public void updateState() {
-    state = nextState;
+    state = (state && (neighbors == 2 || neighbors == 3)) || (!state && neighbors == 3);
   }
 
   @Override

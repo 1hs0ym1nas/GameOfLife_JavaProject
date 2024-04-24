@@ -5,18 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d50f01c9-8d38-4ae6-8204-b6dadd62c042" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/GameOfLife/Controller/AbstractController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GameOfLife/View/components/Buttons.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GameOfLife/utils/IObserver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GameOfLife/utils/ISubject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GameOfLife/Model/AbstractModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/Controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/Controller/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/Controller/IController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Controller/IControllerToModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Controller/IControllerToView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/Model/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/ICell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/Model/ICell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/IModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/Model/IModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/IObserver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/ISubject.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/Model/Model.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/View/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/View/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/utils/ISubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/utils/ISubject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713913502276</updated>
       <workItem from="1713913503560" duration="4160000" />
-      <workItem from="1713935410611" duration="6533000" />
+      <workItem from="1713935410611" duration="15321000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />

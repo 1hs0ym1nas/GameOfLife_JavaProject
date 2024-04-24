@@ -3,13 +3,13 @@ package GameOfLife.Controller;
 import GameOfLife.Model.EStatus;
 
 public interface IController {
-  void setStatus(EStatus status) throws Exception;
+  void setStatus(EStatus status);
 
-  void setSize(int size) throws Exception;
+  void setSize(int size);
 
-  void setCellStatus(int x, int y, boolean state) throws Exception;
+  void setCellStatus(int x, int y, boolean state);
 
-  void setTime(int time) throws Exception;
+  void setTime(int time);
 
   EStatus getStatus();
 

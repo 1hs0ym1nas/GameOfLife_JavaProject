@@ -1,28 +1,37 @@
 package GameOfLife.Model;
+import GameOfLife.utils.IObserver;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
-public class Model implements IModel {
+public class Model extends AbstractModel {
   private Cell[][] grid;
   private EStatus status;
   private int time;
   private int size;
-  private final List<IObserver> observers = new ArrayList<>();
+  private final ArrayList<IObserver> observers = new ArrayList<>();
+  private int generation;
+  private static IModel instance = null;
+  private int countDown;
+  private final Timer timer;
 
-  public Model(int size) {
-    this.size = size;
-    this.grid = new Cell[size][size];
-    for (int i = 0; i < size; i++) {
-      for (int j = 0; j < size; j++) {
-        grid[i][j] = new Cell();
-      }
-    }
+  private Model() {
     this.status = EStatus.SEED;
+    timer = new Timer();
+    countDown();
+  }
+
+  public static IModel getModelInstance() {
+    if (instance == null) {
+      instance = new Model();
+    }
+    return instance;
   }
 
   @Override
   public void setTime(int time) {
     this.time = time;
+    this.countDown = time;
   }
 
   @Override
@@ -34,29 +43,23 @@ public class Model implements IModel {
   public void setSize(int size) {
     this.size = size;
     grid = new Cell[size][size];
-    // Initialize cells
-  }
-
-  @Override
-  public void setNextGeneration() {
-    // Compute next generation
-    boolean[][] nextGridState = new boolean[size][size];
-    for (int i = 0; i < grid.length; i++) {
-      for (int j = 0; j < grid[i].length; j++) {
-        int neighbors = grid[i][j].countNeighboring(this.toBooleanGrid(), i, j);
-        grid[i][j].setAlive(neighbors);
-        nextGridState[i][j] = grid[i][j].getState();
-      }
-    }
-
-    // Update grid state to the next generation
     for (int i = 0; i < size; i++) {
       for (int j = 0; j < size; j++) {
-        grid[i][j].updateState();
+        grid[i][j] = new Cell();
       }
     }
+  }
 
-    notifyObserver();
+  private void updateNextGeneration() {
+    // Get the state of the previous generation
+    boolean[][] preGridState = toBooleanGrid();
+
+    // Update the state of the cells for next generation
+    for (int i = 0; i < grid.length; i++) {
+      for (int j = 0; j < grid[i].length; j++) {
+        grid[i][j].updateState(i, j, preGridState);
+      }
+    }
   }
 
   private boolean[][] toBooleanGrid() {
@@ -70,6 +73,11 @@ public class Model implements IModel {
   }
 
   @Override
+  public boolean[][] getGrid() {
+    return toBooleanGrid();
+  }
+
+  @Override
   public void attach(IObserver observer) {
     observers.add(observer);
   }
@@ -77,7 +85,7 @@ public class Model implements IModel {
   @Override
   public void notifyObserver() {
     for (IObserver observer : observers) {
-      observer.update(this.toBooleanGrid(), time);
+      observer.update();
     }
   }
 
@@ -91,6 +99,46 @@ public class Model implements IModel {
   @Override
   public EStatus getStatus() {
     return status;
+  }
+
+
+  @Override
+  public void restart() {
+    status = EStatus.SEED;
+    generation = 0;
+    for (int i = 0; i < size; i++) {
+      for (int j = 0; j < size; j++) {
+        grid[i][j].setState(false);
+      }
+    }
+  }
+
+  @Override
+  public int getGeneration() {
+    return generation;
+  }
+
+  @Override
+  public int getCountDown() {
+    return countDown;
+  }
+
+  @Override
+  public void countDown() {
+    timer.scheduleAtFixedRate(new TimerTask() {
+      @Override
+      public void run() {
+        if (status == EStatus.RUNNING) {
+          if (countDown == 0) {
+            updateNextGeneration();
+            countDown = time;
+          } else {
+            countDown--;
+          }
+          notifyObserver();
+        }
+      }
+    }, 0, 1000);
   }
 }
 
