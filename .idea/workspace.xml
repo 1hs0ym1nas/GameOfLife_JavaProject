@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/Controller/AbstractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/Controller/AbstractController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/Controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/Controller/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/Controller/IController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/AbstractModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/Model/AbstractModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/IModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/Model/IModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/Model/Model.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/View/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/View/View.java" afterDir="false" />
@@ -84,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713913502276</updated>
       <workItem from="1713913503560" duration="4160000" />
-      <workItem from="1713935410611" duration="20820000" />
+      <workItem from="1713935410611" duration="22390000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />

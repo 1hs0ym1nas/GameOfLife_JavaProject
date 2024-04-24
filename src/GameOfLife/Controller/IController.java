@@ -7,7 +7,7 @@ public interface IController {
 
   void setSize(int size);
 
-  void setCellStatus(int x, int y, boolean state);
+  void setCellStatus(int x, int y);
 
   void setTime(int time);
 

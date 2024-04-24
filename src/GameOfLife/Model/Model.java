@@ -12,7 +12,7 @@ public class Model extends AbstractModel {
   private final ArrayList<IObserver> observers = new ArrayList<>();
   private int generation;
   private static IModel instance = null;
-  private int countDown;
+  private int countDown = time;
   private final Timer timer;
 
   private Model() {
@@ -95,9 +95,9 @@ public class Model extends AbstractModel {
   }
 
   @Override
-  public void setCellState(int x, int y, boolean state) {
+  public void setCellState(int x, int y) {
     if (x >= 0 && x < size && y >= 0 && y < size) {
-      grid[x][y].setState(state);
+      grid[x][y].setState(!grid[x][y].getState());
     }
   }
 

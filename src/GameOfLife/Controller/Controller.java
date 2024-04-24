@@ -27,8 +27,9 @@ public class Controller extends AbstractController {
   }
 
   @Override
-  public void setCellStatus(int x, int y, boolean state) {
-    model.setCellState(x, y, state);
+  public void setCellStatus(int x, int y) {
+    model.setCellState(x, y);
+    notifyObserver();
   }
 
   @Override

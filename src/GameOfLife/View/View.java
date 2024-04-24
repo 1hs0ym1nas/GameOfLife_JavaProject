@@ -11,6 +11,8 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -38,7 +40,9 @@ public class View implements IObserver {
   private JLabel countDown;
   private JLabel[][] grid;
   private JPanel gridPanel;
-  private JFrame view = new JFrame("This is the home window");
+  private final JFrame view = new JFrame("This is the home window");
+  private int initTime = 5;
+  private int initSize = 10;
 
   private View() {
     controller.attach(this);
@@ -53,6 +57,9 @@ public class View implements IObserver {
 
     // Add button panel at the top of the window
     view.add(nav, BorderLayout.NORTH);
+
+    controller.setSize(initSize);
+    controller.setTime(initTime);
 
     this.update();
 
@@ -127,8 +134,8 @@ public class View implements IObserver {
     JPanel textPanel = new JPanel(new GridLayout(4, 1));
 
     // Create spinner for size and time
-    sizeSpinner = new JSpinner(new SpinnerNumberModel(0, 0, 100, 1));
-    timeSpinner = new JSpinner(new SpinnerNumberModel(0, 0, 60, 1));
+    sizeSpinner = new JSpinner(new SpinnerNumberModel(initSize, 1, 25, 1));
+    timeSpinner = new JSpinner(new SpinnerNumberModel(initTime, 1, 60, 1));
 
     // Add listener for the size spinner
     sizeSpinner.addChangeListener(new ChangeListener() {
@@ -150,8 +157,8 @@ public class View implements IObserver {
     countDown.setOpaque(true);
 
     // Add spinner in the input panel
-    textPanel.add(createLabelAndText("Size:", sizeSpinner));
-    textPanel.add(createLabelAndText("Time:", timeSpinner));
+    textPanel.add(createLabelAndText("Size (1 ~ 25):", sizeSpinner));
+    textPanel.add(createLabelAndText("Time (1 ~ 60s):", timeSpinner));
     textPanel.add(createLabelAndText("Current generation:", currentGeneration));
     textPanel.add(createLabelAndText("Count down:", countDown));
 
@@ -175,17 +182,17 @@ public class View implements IObserver {
     // Generate the JLabel grid based on the boolean grid
     for (int i = 0; i < booleanGrid.length; i++) {
       for (int j = 0; j < booleanGrid[i].length; j++) {
-        this.grid[i][j] = createCell(booleanGrid[i][j]);
+        this.grid[i][j] = createCell(booleanGrid[i][j], i, j);
       }
     }
 
     // Add JLabels representing cells to the panel
     JPanel panel = new JPanel(new GridLayout(this.grid[0].length, this.grid.length));
 
-    for (boolean[] row: booleanGrid) {
-      JPanel rowPanel = new JPanel(new GridLayout(1, row.length));
-      for (boolean isAlive: row) {
-        rowPanel.add(createCell(isAlive));
+    for (int i = 0; i < this.grid.length; i++) {
+      JPanel rowPanel = new JPanel(new GridLayout(1, this.grid.length));
+      for (int j = 0; j < this.grid[0].length; j++) {
+        rowPanel.add(this.grid[i][j]);
       }
       panel.add(rowPanel);
     }
@@ -193,7 +200,7 @@ public class View implements IObserver {
     return panel;
   }
 
-  private JLabel createCell(boolean isAlive) {
+  private JLabel createCell(boolean isAlive, int x, int y) {
     JLabel cell = new JLabel("");
     cell.setPreferredSize(new Dimension(50, 50));
     cell.setOpaque(true);
@@ -204,6 +211,18 @@ public class View implements IObserver {
     } else {
       cell.setBackground(Color.WHITE);
     }
+
+    // Add listener to the cell to listen to the click event
+    cell.addMouseListener(new MouseAdapter() {
+      @Override
+      public void mouseClicked(MouseEvent e) {
+        super.mouseClicked(e);
+        if (controller.getStatus() == EStatus.SEED) {
+          int size = controller.getSize();
+          controller.setCellStatus(x, y);
+        }
+      }
+    });
 
     return cell;
   }
