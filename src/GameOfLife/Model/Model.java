@@ -28,7 +28,6 @@ public class Model implements IModel {
   @Override
   public void setStatus(EStatus status) {
     this.status = status;
-    notifyObserver();
   }
 
   @Override
@@ -87,6 +86,11 @@ public class Model implements IModel {
     if (x >= 0 && x < size && y >= 0 && y < size) {
       grid[x][y].setState(state);
     }
+  }
+
+  @Override
+  public EStatus getStatus() {
+    return status;
   }
 }
 

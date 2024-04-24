@@ -6,5 +6,5 @@ public interface IModel extends ISubject {
   void setSize(int size);
   void setNextGeneration();
   void setCellState(int x, int y, boolean state);
-
+  EStatus getStatus();
 }

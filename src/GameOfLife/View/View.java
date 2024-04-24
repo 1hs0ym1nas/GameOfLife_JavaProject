@@ -1,31 +1,38 @@
 package GameOfLife.View;
 
+import GameOfLife.Controller.AbstractController;
+import GameOfLife.Controller.Controller;
+import GameOfLife.Controller.IController;
+import GameOfLife.Model.EStatus;
+import GameOfLife.utils.IObserver;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
-import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
-import javax.swing.UIManager;
 import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 
-public class View {
-  private JFrame view;
+public class View implements IObserver {
+  private final JFrame view = new JFrame("This is the home window");
+  private final AbstractController controller = Controller.getControllerInstance();
   private static View instance = null;
+  private JButton startButton;
+  private JButton pauseButton;
+  private JButton restartButton;
 
   private View() {
-    // Create a frame
-    view = new JFrame("This is the home window");
-
+    controller.attach(this);
     JPanel buttons =  createButtons();
     JPanel inputs = createTexts();
 
@@ -38,6 +45,7 @@ public class View {
     view.add(nav, BorderLayout.NORTH);
 
     view.add(createGrid(), BorderLayout.CENTER);
+    this.update();
 
     // Init the frame
     view.setVisible(true);
@@ -56,13 +64,51 @@ public class View {
     JPanel buttonPanel = new JPanel();
 
     // Create some new buttons to navigate to different card
-    JButton startButton = new JButton("Start");
-    JButton stopButton = new JButton("Stop");
-    JButton restartButton = new JButton("Restart");
+    startButton = new JButton("Start");
+    pauseButton = new JButton("Pause");
+    restartButton = new JButton("Restart");
+
+    // Add listener to the buttons
+    startButton.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        try {
+          if (controller.getStatus() == EStatus.OVER) {
+            controller.setStatus(EStatus.SEED);
+          } else {
+            controller.setStatus(EStatus.RUNNING);
+          }
+        } catch (Exception error) {
+          //throw new RuntimeException(ex);
+        }
+      }
+    });
+    pauseButton.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        try {
+          if (controller.getStatus() == EStatus.RUNNING) {
+            controller.setStatus(EStatus.PAUSE);
+          }
+        } catch (Exception error) {
+          //throw new RuntimeException(ex);
+        }
+      }
+    });
+    restartButton.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        try {
+          controller.setStatus(EStatus.SEED);
+        } catch (Exception error) {
+          //
+        }
+      }
+    });
 
     // Add button in the button panel
     buttonPanel.add(startButton);
-    buttonPanel.add(stopButton);
+    buttonPanel.add(pauseButton);
     buttonPanel.add(restartButton);
 
     return buttonPanel;
@@ -133,5 +179,31 @@ public class View {
     }
 
     return cell;
+  }
+
+  public void update() {
+    // Disable buttons based on the game status
+    if (controller.getStatus() == EStatus.SEED) {
+      // When the game is waiting for user input
+      // the stop button should be disabled
+      startButton.setEnabled(true);
+      pauseButton.setEnabled(false);
+    } else if (controller.getStatus() == EStatus.RUNNING) {
+      // If the game is running
+      // the start button should be disabled
+      System.out.println("Game is running");
+      startButton.setEnabled(false);
+      pauseButton.setEnabled(true);
+    } else if (controller.getStatus() == EStatus.PAUSE) {
+      // If the game is paused
+      // the stop button should be disabled
+      startButton.setEnabled(true);
+      pauseButton.setEnabled(false);
+    } else if (controller.getStatus() == EStatus.OVER) {
+      // When the game is over
+      // user should restart the game
+      startButton.setEnabled(false);
+      pauseButton.setEnabled(false);
+    }
   }
 }

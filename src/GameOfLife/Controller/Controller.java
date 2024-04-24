@@ -2,70 +2,74 @@ package GameOfLife.Controller;
 
 import GameOfLife.Model.EStatus;
 import GameOfLife.Model.IModel;
-import GameOfLife.View.IView;
+import GameOfLife.Model.Model;
+import GameOfLife.utils.IObserver;
+import java.util.ArrayList;
 
-public class Controller implements IController {
-  private IModel model;
-  private IView view;
+public class Controller extends AbstractController {
+  private final IModel model;
+  private final ArrayList<IObserver> observers;
 
-  public Controller(IModel model, IView view) {
-    this.model = model;
-    this.view = view;
+  private Controller() {
+    this.model = new Model(10);
+    this.observers = new ArrayList<>();
+  }
+
+  public static AbstractController getControllerInstance() {
+    return new Controller();
   }
 
   @Override
-  public IControllerToModel getControllerToModel() {
-    return new ControllerToModel();
+  public void setStatus(EStatus status) throws Exception {
+    model.setStatus(status);
+    notifyObserver();
   }
 
   @Override
-  public IControllerToView getControllerToView() {
-    return new ControllerToView();
+  public void setCellStatus(int x, int y, boolean state) throws Exception {
+    model.setCellState(x, y, state);
   }
 
-  private class ControllerToModel implements IControllerToModel {
-    @Override
-    public void setStatus(EStatus status) {
-      model.setStatus(status);
-    }
-
-    @Override
-    public void setSize(int size) {
-      model.setSize(size);
-    }
-
-    @Override
-    public void setCellState(int x, int y, boolean state) {
-      model.setCellState(x, y, state);
-    }
-
-    @Override
-    public void setTime(int time) {
-      model.setTime(time);
-    }
+  @Override
+  public void setSize(int size) throws Exception {
+    model.setSize(size);
   }
 
-  private class ControllerToView implements IControllerToView {
-    @Override
-    public void setStatus(EStatus status) {
-      view.setStatus(status);
-    }
+  @Override
+  public void setTime(int time) throws Exception {
+    model.setTime(time);
+  }
 
-    @Override
-    public void setSize(int size) {
-      view.setSize(size);
-    }
+  @Override
+  public EStatus getStatus() {
+    return model.getStatus();
+  }
 
-    @Override
-    public void setCellState(int x, int y, boolean state) {
-      view.setCellState(x, y, state);
-    }
+  @Override
+  public int getCountDown() {
+    return 0;
+  }
 
-    @Override
-    public void setTime(int time) {
-      view.setTime(time);
+  @Override
+  public int getGeneration() {
+    return 0;
+  }
+
+  @Override
+  public void notifyObserver() {
+    for (IObserver observer : observers) {
+      observer.update();
     }
   }
 
+  @Override
+  public void attach(IObserver observer) {
+    this.observers.add(observer);
+  }
+
+  @Override
+  public void update() {
+
+  }
 }
 
