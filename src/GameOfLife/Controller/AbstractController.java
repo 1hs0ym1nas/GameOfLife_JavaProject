@@ -1,6 +1,5 @@
 package GameOfLife.Controller;
 
-import GameOfLife.Model.EStatus;
 import GameOfLife.utils.IObserver;
 
 public abstract class AbstractController implements IController, IObserver {

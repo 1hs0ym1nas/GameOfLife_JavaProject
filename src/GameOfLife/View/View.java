@@ -2,7 +2,7 @@ package GameOfLife.View;
 
 import GameOfLife.Controller.AbstractController;
 import GameOfLife.Controller.Controller;
-import GameOfLife.Model.EStatus;
+import GameOfLife.utils.EStatus;
 import GameOfLife.utils.IObserver;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -18,7 +18,6 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
@@ -88,37 +87,19 @@ public class View implements IObserver {
     startButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        try {
-          if (controller.getStatus() == EStatus.SEED) {
-            controller.setTime((int) timeSpinner.getValue());
-            controller.setSize((int) sizeSpinner.getValue());
-          }
-          controller.setStatus(EStatus.RUNNING);
-        } catch (Exception error) {
-          JOptionPane.showMessageDialog(null, error, "Error", JOptionPane.ERROR_MESSAGE);
-        }
+        controller.setStatus(EStatus.RUNNING);
       }
     });
     pauseButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        try {
-          if (controller.getStatus() == EStatus.RUNNING) {
-            controller.setStatus(EStatus.PAUSE);
-          }
-        } catch (Exception error) {
-          //throw new RuntimeException(ex);
-        }
+        controller.setStatus(EStatus.PAUSE);
       }
     });
     restartButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        try {
-          controller.restart();
-        } catch (Exception error) {
-          //
-        }
+        controller.restart();
       }
     });
 
@@ -142,6 +123,13 @@ public class View implements IObserver {
       @Override
       public void stateChanged(ChangeEvent e) {
         controller.setSize((int) sizeSpinner.getValue());
+      }
+    });
+
+    timeSpinner.addChangeListener(new ChangeListener() {
+      @Override
+      public void stateChanged(ChangeEvent e) {
+        controller.setTime((int) timeSpinner.getValue());
       }
     });
 
@@ -253,7 +241,7 @@ public class View implements IObserver {
       restartButton.setEnabled(true);
       timeSpinner.setEnabled(false);
       sizeSpinner.setEnabled(false);
-    } else if (controller.getStatus() == EStatus.OVER) {
+    } else if (controller.getStatus() == EStatus.WIN || controller.getStatus() == EStatus.LOSE) {
       // When the game is over
       // user should restart the game
       startButton.setEnabled(false);

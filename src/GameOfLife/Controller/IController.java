@@ -1,6 +1,6 @@
 package GameOfLife.Controller;
 
-import GameOfLife.Model.EStatus;
+import GameOfLife.utils.EStatus;
 
 public interface IController {
   void setStatus(EStatus status);

@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d50f01c9-8d38-4ae6-8204-b6dadd62c042" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/Controller/AbstractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/Controller/AbstractController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/Controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/Controller/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/Controller/IController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/AbstractModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/Model/AbstractModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/EStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/utils/EStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/IModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/Model/IModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/Model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/View/IView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/View/IView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/View/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/View/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +26,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -65,6 +68,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "min",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/MIN/Desktop/GameOfLife_5004Project",
@@ -85,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713913502276</updated>
       <workItem from="1713913503560" duration="4160000" />
-      <workItem from="1713935410611" duration="22390000" />
+      <workItem from="1713935410611" duration="25128000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />

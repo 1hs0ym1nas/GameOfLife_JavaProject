@@ -1,5 +1,6 @@
 package GameOfLife.Model;
 
+import GameOfLife.utils.EStatus;
 import GameOfLife.utils.ISubject;
 
 public interface IModel extends ISubject {
@@ -13,6 +14,5 @@ public interface IModel extends ISubject {
   int getCountDown();
   boolean[][] getGrid();
   void countDown();
-
   int getSize();
 }

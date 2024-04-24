@@ -1,6 +1,6 @@
 package GameOfLife.Controller;
 
-import GameOfLife.Model.EStatus;
+import GameOfLife.utils.EStatus;
 import GameOfLife.Model.IModel;
 import GameOfLife.Model.Model;
 import GameOfLife.utils.IObserver;
@@ -41,6 +41,7 @@ public class Controller extends AbstractController {
   @Override
   public void setTime(int time) {
     model.setTime(time);
+    notifyObserver();
   }
 
   @Override

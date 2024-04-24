@@ -1,4 +1,5 @@
 package GameOfLife.Model;
+import GameOfLife.utils.EStatus;
 import GameOfLife.utils.IObserver;
 import java.util.ArrayList;
 import java.util.Timer;
@@ -64,6 +65,32 @@ public class Model extends AbstractModel {
       for (int j = 0; j < size; j++) {
         grid[i][j].updateState(i, j, preGridState);
       }
+    }
+
+    // Compare previous generation with current generation
+    boolean[][] currentGridState = toBooleanGrid();
+    checkGameResult(preGridState, currentGridState);
+  }
+
+  private void checkGameResult(boolean[][] pre, boolean[][] cur) {
+    boolean isWin = false;
+
+    for (int i = 0; i < size; i++) {
+      for (int j = 0; j < size; j++) {
+        if (cur[i][j] != pre[i][j]) {
+          return;
+        } else {
+          if (cur[i][j]) {
+            isWin = true;
+          }
+        }
+      }
+      if (isWin) {
+        status = EStatus.WIN;
+      } else {
+        status = EStatus.LOSE;
+      }
+      notifyObserver();
     }
   }
 

@@ -1,6 +1,6 @@
 package GameOfLife.View;
 
-import GameOfLife.Model.EStatus;
+import GameOfLife.utils.EStatus;
 
 public interface IView {
   void setTime(int time);
