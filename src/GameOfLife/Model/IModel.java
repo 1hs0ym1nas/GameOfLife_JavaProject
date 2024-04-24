@@ -13,4 +13,6 @@ public interface IModel extends ISubject {
   int getCountDown();
   boolean[][] getGrid();
   void countDown();
+
+  int getSize();
 }

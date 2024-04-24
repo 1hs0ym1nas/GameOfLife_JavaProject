@@ -43,6 +43,10 @@ public class Model extends AbstractModel {
   @Override
   public void setSize(int size) {
     this.size = size;
+    resetGrid();
+  }
+
+  private void resetGrid() {
     grid = new Cell[size][size];
     for (int i = 0; i < size; i++) {
       for (int j = 0; j < size; j++) {
@@ -56,8 +60,8 @@ public class Model extends AbstractModel {
     boolean[][] preGridState = toBooleanGrid();
 
     // Update the state of the cells for next generation
-    for (int i = 0; i < grid.length; i++) {
-      for (int j = 0; j < grid[i].length; j++) {
+    for (int i = 0; i < size; i++) {
+      for (int j = 0; j < size; j++) {
         grid[i][j].updateState(i, j, preGridState);
       }
     }
@@ -108,11 +112,7 @@ public class Model extends AbstractModel {
     status = EStatus.SEED;
     generation = 0;
     countDown = time;
-    for (int i = 0; i < size; i++) {
-      for (int j = 0; j < size; j++) {
-        grid[i][j].setState(false);
-      }
-    }
+    resetGrid();
     notifyObserver();
   }
 
@@ -143,6 +143,11 @@ public class Model extends AbstractModel {
         }
       }
     }, 0, 1000);
+  }
+
+  @Override
+  public int getSize() {
+    return size;
   }
 }
 

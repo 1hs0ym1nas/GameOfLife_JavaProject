@@ -2,7 +2,6 @@ package GameOfLife.View;
 
 import GameOfLife.Controller.AbstractController;
 import GameOfLife.Controller.Controller;
-import GameOfLife.Controller.IController;
 import GameOfLife.Model.EStatus;
 import GameOfLife.utils.IObserver;
 import java.awt.BorderLayout;
@@ -23,6 +22,8 @@ import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 public class View implements IObserver {
 
@@ -35,12 +36,12 @@ public class View implements IObserver {
   private JSpinner timeSpinner;
   private JLabel currentGeneration;
   private JLabel countDown;
+  private JLabel[][] grid;
+  private JPanel gridPanel;
+  private JFrame view = new JFrame("This is the home window");
 
   private View() {
     controller.attach(this);
-
-    // Create a frame
-    JFrame view = new JFrame("This is the home window");
 
     JPanel buttons =  createButtons();
     JPanel inputs = createTexts();
@@ -53,7 +54,6 @@ public class View implements IObserver {
     // Add button panel at the top of the window
     view.add(nav, BorderLayout.NORTH);
 
-    view.add(createGrid(), BorderLayout.CENTER);
     this.update();
 
     // Init the frame
@@ -130,6 +130,14 @@ public class View implements IObserver {
     sizeSpinner = new JSpinner(new SpinnerNumberModel(0, 0, 100, 1));
     timeSpinner = new JSpinner(new SpinnerNumberModel(0, 0, 60, 1));
 
+    // Add listener for the size spinner
+    sizeSpinner.addChangeListener(new ChangeListener() {
+      @Override
+      public void stateChanged(ChangeEvent e) {
+        controller.setSize((int) sizeSpinner.getValue());
+      }
+    });
+
     // Create label for prompts
     currentGeneration = new JLabel("2");
     currentGeneration.setBackground(Color.white);
@@ -160,10 +168,21 @@ public class View implements IObserver {
   }
 
   private JPanel createGrid() {
-    boolean[][] grid = { {false, true, false}, {true, false, false}, {false, true, true}};
-    JPanel panel = new JPanel(new GridLayout(grid[0].length, grid.length));
+    // Get the boolean grid from the controller
+    boolean[][] booleanGrid = controller.getGrid();
+    grid = new JLabel[booleanGrid.length][booleanGrid[0].length];
 
-    for (boolean[] row: grid) {
+    // Generate the JLabel grid based on the boolean grid
+    for (int i = 0; i < booleanGrid.length; i++) {
+      for (int j = 0; j < booleanGrid[i].length; j++) {
+        this.grid[i][j] = createCell(booleanGrid[i][j]);
+      }
+    }
+
+    // Add JLabels representing cells to the panel
+    JPanel panel = new JPanel(new GridLayout(this.grid[0].length, this.grid.length));
+
+    for (boolean[] row: booleanGrid) {
       JPanel rowPanel = new JPanel(new GridLayout(1, row.length));
       for (boolean isAlive: row) {
         rowPanel.add(createCell(isAlive));
@@ -228,5 +247,14 @@ public class View implements IObserver {
     // Update the current generation and count down
     currentGeneration.setText(String.valueOf(controller.getGeneration()));
     countDown.setText(String.valueOf(controller.getCountDown()));
+
+    if (controller.getSize() > 0) {
+      if (gridPanel != null) {
+        view.remove(gridPanel);
+      }
+      gridPanel = createGrid();
+      view.add(gridPanel, BorderLayout.CENTER);
+    }
+    view.revalidate();
   }
 }

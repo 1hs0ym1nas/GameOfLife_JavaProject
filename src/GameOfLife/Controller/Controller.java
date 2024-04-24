@@ -34,12 +34,12 @@ public class Controller extends AbstractController {
   @Override
   public void setSize(int size) {
     model.setSize(size);
+    notifyObserver();
   }
 
   @Override
   public void setTime(int time) {
     model.setTime(time);
-    System.out.println("Time: " + time);
   }
 
   @Override
@@ -77,6 +77,16 @@ public class Controller extends AbstractController {
   @Override
   public void update() {
     notifyObserver();
+  }
+
+  @Override
+  public boolean[][] getGrid() {
+    return model.getGrid();
+  }
+
+  @Override
+  public int getSize() {
+    return model.getSize();
   }
 }
 

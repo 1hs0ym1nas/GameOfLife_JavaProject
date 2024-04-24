@@ -18,4 +18,8 @@ public interface IController {
   int getGeneration();
 
   void restart();
+
+  boolean[][] getGrid();
+
+  int getSize();
 }
