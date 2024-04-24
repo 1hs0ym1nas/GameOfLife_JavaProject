@@ -16,4 +16,6 @@ public interface IController {
   int getCountDown();
 
   int getGeneration();
+
+  void restart();
 }

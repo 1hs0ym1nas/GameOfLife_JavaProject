@@ -58,6 +58,11 @@ public class Controller extends AbstractController {
   }
 
   @Override
+  public void restart() {
+    model.restart();
+  }
+
+  @Override
   public void notifyObserver() {
     for (IObserver observer : observers) {
       observer.update();

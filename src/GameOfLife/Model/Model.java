@@ -107,11 +107,13 @@ public class Model extends AbstractModel {
   public void restart() {
     status = EStatus.SEED;
     generation = 0;
+    countDown = time;
     for (int i = 0; i < size; i++) {
       for (int j = 0; j < size; j++) {
         grid[i][j].setState(false);
       }
     }
+    notifyObserver();
   }
 
   @Override

@@ -108,7 +108,7 @@ public class View implements IObserver {
       @Override
       public void actionPerformed(ActionEvent e) {
         try {
-          controller.setStatus(EStatus.SEED);
+          controller.restart();
         } catch (Exception error) {
           //
         }
