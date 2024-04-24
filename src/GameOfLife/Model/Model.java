@@ -18,6 +18,7 @@ public class Model extends AbstractModel {
   private Model() {
     this.status = EStatus.SEED;
     timer = new Timer();
+    generation = 0;
     countDown();
   }
 
@@ -132,6 +133,7 @@ public class Model extends AbstractModel {
           if (countDown == 0) {
             updateNextGeneration();
             countDown = time;
+            generation++;
           } else {
             countDown--;
           }

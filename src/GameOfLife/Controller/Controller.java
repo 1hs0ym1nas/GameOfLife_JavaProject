@@ -54,7 +54,7 @@ public class Controller extends AbstractController {
 
   @Override
   public int getGeneration() {
-    return 0;
+    return model.getGeneration();
   }
 
   @Override
