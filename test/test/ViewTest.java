@@ -34,7 +34,6 @@ public class ViewTest {
   public void setUp() throws NoSuchFieldException, IllegalAccessException {
     // Model, Controller and View for the MVC model
     model = Model.getModelInstance();
-    System.out.println(model.getStatus());
     controller = Controller.getControllerInstance(model);
     View view = View.getViewInstance(controller);
 
@@ -68,8 +67,11 @@ public class ViewTest {
     countDown = (JLabel) field.get(view);
   }
 
+  /**
+   * Test the buttons in the view.
+   */
   @Test
-  public void testButtons() throws AWTException {
+  public void testButtons() {
     // Test the text of buttons
     assertEquals("Start", startButton.getText());
     assertEquals("Pause", pauseButton.getText());
@@ -120,6 +122,9 @@ public class ViewTest {
     assertTrue(model.checkInitGridIsEmpty());
   }
 
+  /**
+   * Test the spinner in the view.
+   */
   @Test
   public void testSpinner() {
     // Test the value of spinners
@@ -144,6 +149,10 @@ public class ViewTest {
     assertFalse(sizeSpinner.isEnabled());
   }
 
+  /**
+   * Test the label in the view.
+   * @throws InterruptedException when the thread is interrupted
+   */
   @Test
   public void testLabel() throws InterruptedException {
     // Test the text of labels
