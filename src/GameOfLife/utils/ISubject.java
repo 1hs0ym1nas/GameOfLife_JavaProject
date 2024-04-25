@@ -1,4 +1,4 @@
-package GameOfLife.Model;
+package GameOfLife.utils;
 
 public interface ISubject {
   void notifyObserver();

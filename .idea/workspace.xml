@@ -6,6 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="d50f01c9-8d38-4ae6-8204-b6dadd62c042" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Controller/AbstractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/controller/AbstractController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Controller/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/controller/IController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/AbstractModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/model/AbstractModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/model/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/ICell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/model/ICell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/IModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/model/IModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/View/IView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/view/IView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/View/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/View/components/Buttons.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +27,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -28,12 +41,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "1hs0ym1nas"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;1hs0ym1nas&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -42,21 +55,26 @@
       </UrlAndAccount>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2fWOj6UBDnskTHK3YuzXACeWgqP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "monica",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "min",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/MIN/Desktop/GameOfLife_5004Project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,13 +83,6 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-f98dd351" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -80,7 +91,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1713913502276</updated>
-      <workItem from="1713913503560" duration="6328000" />
+      <workItem from="1713913503560" duration="4160000" />
+      <workItem from="1713935410611" duration="28349000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -90,23 +102,7 @@
       <option name="project" value="LOCAL" />
       <updated>1713922450940</updated>
     </task>
-    <task id="LOCAL-00002" summary="update">
-      <option name="closed" value="true" />
-      <created>1713922582644</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1713922582644</updated>
-    </task>
-    <task id="LOCAL-00003" summary="update">
-      <option name="closed" value="true" />
-      <created>1713922641440</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1713922641440</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
