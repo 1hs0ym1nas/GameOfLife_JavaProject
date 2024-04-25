@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d50f01c9-8d38-4ae6-8204-b6dadd62c042" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameOfLife_5004Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GameOfLife_5004Project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/model/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/model/Cell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/model/Model.java" afterDir="false" />
@@ -87,7 +88,7 @@
       <workItem from="1713913503560" duration="4160000" />
       <workItem from="1713935410611" duration="30231000" />
       <workItem from="1714012199018" duration="23000" />
-      <workItem from="1714065695978" duration="525000" />
+      <workItem from="1714065695978" duration="609000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
