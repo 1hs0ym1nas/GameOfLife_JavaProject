@@ -6,18 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d50f01c9-8d38-4ae6-8204-b6dadd62c042" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Controller/AbstractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/controller/AbstractController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Controller/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/controller/IController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/AbstractModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/model/AbstractModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/model/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/ICell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/model/ICell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/IModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/model/IModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/Model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/View/IView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/view/IView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/View/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/view/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/View/components/Buttons.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +60,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "min",
+    "git-widget-placeholder": "monica",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/MIN/Desktop/GameOfLife_5004Project",
     "node.js.detected.package.eslint": "true",
@@ -122,6 +110,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="c" />
+    <option name="LAST_COMMIT_MESSAGE" value="c" />
   </component>
 </project>
