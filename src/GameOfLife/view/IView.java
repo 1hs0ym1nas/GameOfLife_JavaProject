@@ -1,4 +1,4 @@
-package GameOfLife.View;
+package GameOfLife.view;
 
 import GameOfLife.utils.EStatus;
 

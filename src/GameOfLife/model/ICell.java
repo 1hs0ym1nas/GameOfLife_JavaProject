@@ -1,4 +1,4 @@
-package GameOfLife.Model;
+package GameOfLife.model;
 
 public interface ICell {
   void setState(boolean state);

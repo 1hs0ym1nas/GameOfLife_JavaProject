@@ -1,7 +1,7 @@
-package GameOfLife.View;
+package GameOfLife.view;
 
-import GameOfLife.Controller.AbstractController;
-import GameOfLife.Controller.Controller;
+import GameOfLife.controller.AbstractController;
+import GameOfLife.controller.Controller;
 import GameOfLife.utils.EStatus;
 import GameOfLife.utils.IObserver;
 import java.awt.BorderLayout;

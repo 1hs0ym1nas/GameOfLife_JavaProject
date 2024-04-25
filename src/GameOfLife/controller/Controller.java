@@ -1,8 +1,8 @@
-package GameOfLife.Controller;
+package GameOfLife.controller;
 
 import GameOfLife.utils.EStatus;
-import GameOfLife.Model.IModel;
-import GameOfLife.Model.Model;
+import GameOfLife.model.IModel;
+import GameOfLife.model.Model;
 import GameOfLife.utils.IObserver;
 import java.util.ArrayList;
 

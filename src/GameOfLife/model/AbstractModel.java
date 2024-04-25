@@ -1,4 +1,4 @@
-package GameOfLife.Model;
+package GameOfLife.model;
 
 import GameOfLife.utils.ISubject;
 

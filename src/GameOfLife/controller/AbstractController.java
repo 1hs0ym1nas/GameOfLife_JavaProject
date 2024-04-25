@@ -1,4 +1,4 @@
-package GameOfLife.Controller;
+package GameOfLife.controller;
 
 import GameOfLife.utils.IObserver;
 

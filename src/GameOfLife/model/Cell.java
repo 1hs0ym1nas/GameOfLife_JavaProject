@@ -1,4 +1,4 @@
-package GameOfLife.Model;
+package GameOfLife.model;
 
 public class Cell implements ICell {
   private boolean state;
@@ -33,11 +33,7 @@ public class Cell implements ICell {
       }
     }
 
-    if (neighbors == 3 || neighbors == 2) {
-      state = true;
-    } else {
-      state = false;
-    }
+    state = neighbors == 3 || neighbors == 2;
   }
 
   @Override
