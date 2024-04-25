@@ -1,5 +1,7 @@
 package GameOfLife.model;
 
+import java.util.Arrays;
+
 public class Cell implements ICell {
   private boolean state;
 
@@ -13,7 +15,7 @@ public class Cell implements ICell {
   }
 
   @Override
-  public void updateState(int x, int y, boolean[][] grid) {
+  public void updateState(int x, int y, boolean[][] preGrid) {
     int neighbors = 0;
 
     // Coordinates of the neighbors
@@ -23,9 +25,9 @@ public class Cell implements ICell {
     // Find the number of neighbors based on the coordinates
     for (int neighborsX : neighborsXs) {
       for (int neighborsY : neighborsYs) {
-        if ((neighborsX >= 0 && neighborsX < grid.length) // X is in bounds
-            && (neighborsY >= 0 && neighborsY < grid[neighborsX].length) // Y is in bounds
-            && grid[neighborsX][neighborsY] // Cell is alive
+        if ((neighborsX >= 0 && neighborsX < preGrid.length) // X is in bounds
+            && (neighborsY >= 0 && neighborsY < preGrid[0].length) // Y is in bounds
+            && preGrid[neighborsX][neighborsY] // Neighbors is alive
             && (neighborsX != x && neighborsY != y) // Cell is not itself
         ) {
           neighbors++;
