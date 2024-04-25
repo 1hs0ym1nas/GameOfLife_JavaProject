@@ -10,14 +10,14 @@ public class Controller extends AbstractController {
   private final IModel model;
   private final ArrayList<IObserver> observers;
 
-  private Controller() {
+  private Controller(IModel model) {
     this.model = Model.getModelInstance();
     this.observers = new ArrayList<>();
     model.attach(this);
   }
 
-  public static AbstractController getControllerInstance() {
-    return new Controller();
+  public static AbstractController getControllerInstance(IModel model) {
+    return new Controller(model);
   }
 
   @Override

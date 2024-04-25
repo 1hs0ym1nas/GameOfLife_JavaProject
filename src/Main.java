@@ -1,7 +1,13 @@
+import GameOfLife.controller.AbstractController;
+import GameOfLife.controller.Controller;
+import GameOfLife.model.IModel;
+import GameOfLife.model.Model;
 import GameOfLife.view.View;
 
 public class Main {
   public static void main(String[] args) {
-    View view = View.getViewInstance();
+    IModel model = Model.getModelInstance();
+    AbstractController controller = Controller.getControllerInstance(model);
+    View view = View.getViewInstance(controller);
   }
 }

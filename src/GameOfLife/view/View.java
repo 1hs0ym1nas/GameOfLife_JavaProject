@@ -29,7 +29,7 @@ import javax.swing.event.ChangeListener;
 
 public class View implements IObserver {
 
-  private final AbstractController controller = Controller.getControllerInstance();
+  private final AbstractController controller;
   private static View instance = null;
   private JButton startButton;
   private JButton pauseButton;
@@ -44,7 +44,8 @@ public class View implements IObserver {
   private int initTime = 3;
   private int initSize = 10;
 
-  private View() {
+  private View(AbstractController controller) {
+    this.controller = controller;
     controller.attach(this);
 
     JPanel buttons =  createButtons();
@@ -69,9 +70,9 @@ public class View implements IObserver {
     view.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
   }
 
-  public static View getViewInstance() {
+  public static View getViewInstance(AbstractController controller) {
     if (instance == null) {
-      instance = new View();
+      instance = new View(controller);
     }
     return instance;
   }
