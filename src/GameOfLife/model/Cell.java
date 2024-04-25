@@ -1,6 +1,5 @@
 package GameOfLife.model;
 
-import java.util.Arrays;
 
 public class Cell implements ICell {
   private boolean state;

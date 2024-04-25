@@ -7,11 +7,10 @@
     <list default="true" id="d50f01c9-8d38-4ae6-8204-b6dadd62c042" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameOfLife_5004Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GameOfLife_5004Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/model/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/model/Cell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/view/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/CellTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/model/CellTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/model/ModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/model/ModelTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,23 +59,131 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;min&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/MIN/Desktop/GameOfLife_5004Project&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.CellTest.executor": "Run",
+    "JUnit.CellTest.testCellWithFourNeighbors.executor": "Run",
+    "JUnit.CellTest.testCellWithThreeNeighbors.executor": "Run",
+    "JUnit.CellTest.testCellWithTwoNeighbors.executor": "Run",
+    "JUnit.ModelTest.executor": "Run",
+    "JUnit.ModelTest.testCountDown.executor": "Run",
+    "JUnit.ModelTest.testGenerationUpdate.executor": "Run",
+    "JUnit.ModelTest.testInitialStatus.executor": "Run",
+    "JUnit.ModelTest.testLoseCondition.executor": "Run",
+    "JUnit.ModelTest.testWin.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "monica",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/MIN/Desktop/GameOfLife_5004Project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration name="CellTest.testCellWithFourNeighbors" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GameOfLife_5004Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model" />
+      <option name="MAIN_CLASS_NAME" value="model.CellTest" />
+      <option name="METHOD_NAME" value="testCellWithFourNeighbors" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CellTest.testCellWithThreeNeighbors" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GameOfLife_5004Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model" />
+      <option name="MAIN_CLASS_NAME" value="model.CellTest" />
+      <option name="METHOD_NAME" value="testCellWithThreeNeighbors" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CellTest.testCellWithTwoNeighbors" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GameOfLife_5004Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model" />
+      <option name="MAIN_CLASS_NAME" value="model.CellTest" />
+      <option name="METHOD_NAME" value="testCellWithTwoNeighbors" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ModelTest.testCountDown" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GameOfLife_5004Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model" />
+      <option name="MAIN_CLASS_NAME" value="model.ModelTest" />
+      <option name="METHOD_NAME" value="testCountDown" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ModelTest.testInitialStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GameOfLife_5004Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model" />
+      <option name="MAIN_CLASS_NAME" value="model.ModelTest" />
+      <option name="METHOD_NAME" value="testInitialStatus" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CellTest.testCellWithThreeNeighbors" />
+        <item itemvalue="JUnit.CellTest.testCellWithFourNeighbors" />
+        <item itemvalue="JUnit.CellTest.testCellWithTwoNeighbors" />
+        <item itemvalue="JUnit.ModelTest.testInitialStatus" />
+        <item itemvalue="JUnit.ModelTest.testCountDown" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

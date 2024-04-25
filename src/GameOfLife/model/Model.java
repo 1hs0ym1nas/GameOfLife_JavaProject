@@ -2,7 +2,6 @@ package GameOfLife.model;
 import GameOfLife.utils.EStatus;
 import GameOfLife.utils.IObserver;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -196,5 +195,8 @@ public class Model extends AbstractModel {
     }
     return true;
   }
+
+
+
 }
 
