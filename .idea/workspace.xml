@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d50f01c9-8d38-4ae6-8204-b6dadd62c042" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/test/test/ViewTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOfLife_5004Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GameOfLife_5004Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/view/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/view/ViewTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controller/ControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/controller/ControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test/ViewTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/ViewTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +60,12 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.ControllerTest.testCheckInitGridIsEmpyty.executor": "Run",
+    "JUnit.ControllerTest.testRestart.executor": "Run",
+    "JUnit.ControllerTest.testSetCellStatus.executor": "Run",
+    "JUnit.ControllerTest.testSetStatus.executor": "Run",
+    "JUnit.ControllerTest.testSize.executor": "Run",
+    "JUnit.ControllerTest.testTIme.executor": "Run",
     "JUnit.ViewTest.executor": "Run",
     "JUnit.ViewTest.testButtons.executor": "Run",
     "JUnit.ViewTest.testCells.executor": "Run",
@@ -91,66 +94,82 @@
       <recent name="GameOfLife.view.test" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="ViewTest.testButtons" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ControllerTest.testCheckInitGridIsEmpyty">
+    <configuration name="ControllerTest.testCheckInitGridIsEmpyty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GameOfLife_5004Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.ViewTest" />
-      <option name="METHOD_NAME" value="testButtons" />
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.ControllerTest" />
+      <option name="METHOD_NAME" value="testCheckInitGridIsEmpyty" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ViewTest.testCells" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerTest.testRestart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GameOfLife_5004Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.ViewTest" />
-      <option name="METHOD_NAME" value="testCells" />
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.ControllerTest" />
+      <option name="METHOD_NAME" value="testRestart" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ViewTest.testLabel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerTest.testSetCellStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GameOfLife_5004Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.ViewTest" />
-      <option name="METHOD_NAME" value="testLabel" />
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.ControllerTest" />
+      <option name="METHOD_NAME" value="testSetCellStatus" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ViewTest.testSpinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerTest.testSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GameOfLife_5004Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.ViewTest" />
-      <option name="METHOD_NAME" value="testSpinner" />
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.ControllerTest" />
+      <option name="METHOD_NAME" value="testSize" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerTest.testTIme" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GameOfLife_5004Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.ControllerTest" />
+      <option name="METHOD_NAME" value="testTIme" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -158,10 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ViewTest.testLabel" />
-        <item itemvalue="JUnit.ViewTest.testSpinner" />
-        <item itemvalue="JUnit.ViewTest.testButtons" />
-        <item itemvalue="JUnit.ViewTest.testCells" />
+        <item itemvalue="JUnit.ControllerTest.testCheckInitGridIsEmpyty" />
+        <item itemvalue="JUnit.ControllerTest.testRestart" />
+        <item itemvalue="JUnit.ControllerTest.testSetCellStatus" />
+        <item itemvalue="JUnit.ControllerTest.testSize" />
+        <item itemvalue="JUnit.ControllerTest.testTIme" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +196,7 @@
       <workItem from="1713913503560" duration="4160000" />
       <workItem from="1713935410611" duration="30231000" />
       <workItem from="1714012199018" duration="23000" />
-      <workItem from="1714065695978" duration="8944000" />
+      <workItem from="1714065695978" duration="11069000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
