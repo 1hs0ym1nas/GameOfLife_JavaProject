@@ -18,6 +18,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
@@ -39,8 +40,8 @@ public class View implements IObserver {
   private JLabel countDown;
   private JLabel[][] grid;
   private JPanel gridPanel;
-  private final JFrame view = new JFrame("This is the home window");
-  private int initTime = 5;
+  private final JFrame view = new JFrame("Game of life");
+  private int initTime = 3;
   private int initSize = 10;
 
   private View() {
@@ -64,7 +65,7 @@ public class View implements IObserver {
 
     // Init the frame
     view.setVisible(true);
-    view.setSize(9 * 40, 16 * 40);
+    view.setSize(9 * 40, 15 * 40);
     view.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
   }
 
@@ -87,6 +88,11 @@ public class View implements IObserver {
     startButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
+        if (controller.checkInitGridIsEmpty()) {
+          JOptionPane.showMessageDialog(null, "Please click and initialize the grid before "
+              + "starting the game!");
+          return;
+        }
         controller.setStatus(EStatus.RUNNING);
       }
     });
@@ -138,11 +144,13 @@ public class View implements IObserver {
     currentGeneration.setBackground(Color.white);
     currentGeneration.setBorder(BorderFactory.createLineBorder(Color.GRAY, 1));
     currentGeneration.setOpaque(true);
+    currentGeneration.setHorizontalAlignment(JLabel.RIGHT);
 
     countDown = new JLabel("10");
     countDown.setBackground(Color.white);
     countDown.setBorder(BorderFactory.createLineBorder(Color.GRAY, 1));
     countDown.setOpaque(true);
+    countDown.setHorizontalAlignment(JLabel.RIGHT);
 
     // Add spinner in the input panel
     textPanel.add(createLabelAndText("Size (1 ~ 25):", sizeSpinner));
@@ -262,6 +270,13 @@ public class View implements IObserver {
       gridPanel = createGrid();
       view.add(gridPanel, BorderLayout.CENTER);
     }
+
+    if (controller.getStatus() == EStatus.WIN) {
+      JOptionPane.showMessageDialog(null, "You win! Click the restart button to play again!");
+    } else if (controller.getStatus() == EStatus.LOSE) {
+      JOptionPane.showMessageDialog(null, "You lose! Click the restart button to play again!");
+    }
+
     view.revalidate();
   }
 }

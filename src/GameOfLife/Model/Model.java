@@ -73,25 +73,32 @@ public class Model extends AbstractModel {
   }
 
   private void checkGameResult(boolean[][] pre, boolean[][] cur) {
-    boolean isWin = false;
+    checkIsLose(cur);
+    checkIsWin(pre, cur);
+  }
 
+  private void checkIsWin(boolean[][] pre, boolean[][] cur) {
+    // Check if the current generation is the same as the previous generation
     for (int i = 0; i < size; i++) {
       for (int j = 0; j < size; j++) {
         if (cur[i][j] != pre[i][j]) {
           return;
-        } else {
-          if (cur[i][j]) {
-            isWin = true;
-          }
         }
       }
-      if (isWin) {
-        status = EStatus.WIN;
-      } else {
-        status = EStatus.LOSE;
-      }
-      notifyObserver();
     }
+    status = EStatus.WIN;
+  }
+
+  private void checkIsLose(boolean[][] cur) {
+    // Check if there are alive cells in the current generation
+    for (int i = 0; i < size; i++) {
+      for (int j = 0; j < size; j++) {
+        if (cur[i][j]) {
+          return;
+        }
+      }
+    }
+    status = EStatus.LOSE;
   }
 
   private boolean[][] toBooleanGrid() {
@@ -175,6 +182,18 @@ public class Model extends AbstractModel {
   @Override
   public int getSize() {
     return size;
+  }
+
+  @Override
+  public boolean checkInitGridIsEmpty() {
+    for (int i = 0; i < size; i++) {
+      for (int j = 0; j < size; j++) {
+        if (grid[i][j].getState()) {
+          return false;
+        }
+      }
+    }
+    return true;
   }
 }
 

@@ -22,4 +22,5 @@ public interface IController {
   boolean[][] getGrid();
 
   int getSize();
+  boolean checkInitGridIsEmpty();
 }

@@ -15,4 +15,5 @@ public interface IModel extends ISubject {
   boolean[][] getGrid();
   void countDown();
   int getSize();
+  boolean checkInitGridIsEmpty();
 }

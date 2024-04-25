@@ -90,5 +90,10 @@ public class Controller extends AbstractController {
   public int getSize() {
     return model.getSize();
   }
+
+  @Override
+  public boolean checkInitGridIsEmpty() {
+    return model.checkInitGridIsEmpty();
+  }
 }
 
