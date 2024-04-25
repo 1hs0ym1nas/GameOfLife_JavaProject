@@ -33,7 +33,11 @@ public class Cell implements ICell {
       }
     }
 
-    state = (state && (neighbors == 2 || neighbors == 3)) || (!state && neighbors == 3);
+    if (neighbors == 3 || neighbors == 2) {
+      state = true;
+    } else {
+      state = false;
+    }
   }
 
   @Override
