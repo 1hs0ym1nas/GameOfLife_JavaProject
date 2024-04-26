@@ -9,22 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d50f01c9-8d38-4ae6-8204-b6dadd62c042" name="Changes" comment="Model Test added">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/GameOfLife_5004Project_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/GameOfLife_5004Project.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/GameOfLife_UML.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/controller/AbstractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/controller/AbstractController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/controller/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/controller/IController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/model/ICell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/model/ICell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/model/IModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/model/IModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/utils/IObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/utils/IObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/utils/ISubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/utils/ISubject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife_UML.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/model/CellTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/model/CellTest.java" afterDir="false" />
+    <list default="true" id="d50f01c9-8d38-4ae6-8204-b6dadd62c042" name="Changes" comment="added Javadoc and UML">
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714077483564</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added Javadoc and UML">
+      <option name="closed" value="true" />
+      <created>1714117560476</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714117560477</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,6 +252,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="update" />
     <MESSAGE value="Model Test added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Model Test added" />
+    <MESSAGE value="added Javadoc and UML" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Javadoc and UML" />
   </component>
 </project>
