@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="GameOfLife_5004Project:jar" />
-    </artifacts-to-build>
-  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d50f01c9-8d38-4ae6-8204-b6dadd62c042" name="Changes" comment="added Javadoc and UML">
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
+    <list default="true" id="d50f01c9-8d38-4ae6-8204-b6dadd62c042" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controller/ControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/controller/ControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test/ViewTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/ViewTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +18,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -48,9 +45,6 @@
       </UrlAndAccount>
     </option>
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -64,120 +58,118 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.CellTest.executor": "Run",
-    "JUnit.CellTest.testCellWithFourNeighbors.executor": "Run",
-    "JUnit.CellTest.testCellWithThreeNeighbors.executor": "Run",
-    "JUnit.CellTest.testCellWithTwoNeighbors.executor": "Run",
-    "JUnit.ModelTest.executor": "Run",
-    "JUnit.ModelTest.testCountDown.executor": "Run",
-    "JUnit.ModelTest.testGenerationUpdate.executor": "Run",
-    "JUnit.ModelTest.testInitialStatus.executor": "Run",
-    "JUnit.ModelTest.testLoseCondition.executor": "Run",
-    "JUnit.ModelTest.testWin.executor": "Run",
+    "JUnit.ControllerTest.testCheckInitGridIsEmpyty.executor": "Run",
+    "JUnit.ControllerTest.testRestart.executor": "Run",
+    "JUnit.ControllerTest.testSetCellStatus.executor": "Run",
+    "JUnit.ControllerTest.testSetStatus.executor": "Run",
+    "JUnit.ControllerTest.testSize.executor": "Run",
+    "JUnit.ControllerTest.testTIme.executor": "Run",
+    "JUnit.ViewTest.executor": "Run",
+    "JUnit.ViewTest.testButtons.executor": "Run",
+    "JUnit.ViewTest.testCells.executor": "Run",
+    "JUnit.ViewTest.testLabel.executor": "Run",
+    "JUnit.ViewTest.testSpinner.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "monica",
+    "git-widget-placeholder": "min",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/myeon/IdeaProjects/5004/GameOfLife_5004Project/res",
+    "last_directory_selection": "C:/Users/MIN/Desktop/GameOfLife_5004Project/test",
+    "last_opened_file_path": "C:/Users/MIN/Desktop/GameOfLife_5004Project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\myeon\IdeaProjects\5004\GameOfLife_5004Project\res" />
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="GameOfLife.view.test" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="CellTest.testCellWithFourNeighbors" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ControllerTest.testCheckInitGridIsEmpyty">
+    <configuration name="ControllerTest.testCheckInitGridIsEmpyty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GameOfLife_5004Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="model.*" />
+          <option name="PATTERN" value="controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="model" />
-      <option name="MAIN_CLASS_NAME" value="model.CellTest" />
-      <option name="METHOD_NAME" value="testCellWithFourNeighbors" />
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.ControllerTest" />
+      <option name="METHOD_NAME" value="testCheckInitGridIsEmpyty" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CellTest.testCellWithThreeNeighbors" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerTest.testRestart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GameOfLife_5004Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="model.*" />
+          <option name="PATTERN" value="controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="model" />
-      <option name="MAIN_CLASS_NAME" value="model.CellTest" />
-      <option name="METHOD_NAME" value="testCellWithThreeNeighbors" />
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.ControllerTest" />
+      <option name="METHOD_NAME" value="testRestart" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CellTest.testCellWithTwoNeighbors" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerTest.testSetCellStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GameOfLife_5004Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="model.*" />
+          <option name="PATTERN" value="controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="model" />
-      <option name="MAIN_CLASS_NAME" value="model.CellTest" />
-      <option name="METHOD_NAME" value="testCellWithTwoNeighbors" />
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.ControllerTest" />
+      <option name="METHOD_NAME" value="testSetCellStatus" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ModelTest.testCountDown" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerTest.testSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GameOfLife_5004Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="model.*" />
+          <option name="PATTERN" value="controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="model" />
-      <option name="MAIN_CLASS_NAME" value="model.ModelTest" />
-      <option name="METHOD_NAME" value="testCountDown" />
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.ControllerTest" />
+      <option name="METHOD_NAME" value="testSize" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ModelTest.testInitialStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerTest.testTIme" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GameOfLife_5004Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="model.*" />
+          <option name="PATTERN" value="controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="model" />
-      <option name="MAIN_CLASS_NAME" value="model.ModelTest" />
-      <option name="METHOD_NAME" value="testInitialStatus" />
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.ControllerTest" />
+      <option name="METHOD_NAME" value="testTIme" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -185,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CellTest.testCellWithThreeNeighbors" />
-        <item itemvalue="JUnit.CellTest.testCellWithFourNeighbors" />
-        <item itemvalue="JUnit.CellTest.testCellWithTwoNeighbors" />
-        <item itemvalue="JUnit.ModelTest.testInitialStatus" />
-        <item itemvalue="JUnit.ModelTest.testCountDown" />
+        <item itemvalue="JUnit.ControllerTest.testCheckInitGridIsEmpyty" />
+        <item itemvalue="JUnit.ControllerTest.testRestart" />
+        <item itemvalue="JUnit.ControllerTest.testSetCellStatus" />
+        <item itemvalue="JUnit.ControllerTest.testSize" />
+        <item itemvalue="JUnit.ControllerTest.testTIme" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +196,7 @@
       <workItem from="1713913503560" duration="4160000" />
       <workItem from="1713935410611" duration="30231000" />
       <workItem from="1714012199018" duration="23000" />
-      <workItem from="1714065695978" duration="609000" />
+      <workItem from="1714065695978" duration="11069000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -214,23 +206,7 @@
       <option name="project" value="LOCAL" />
       <updated>1713922450940</updated>
     </task>
-    <task id="LOCAL-00002" summary="Model Test added">
-      <option name="closed" value="true" />
-      <created>1714077483563</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1714077483564</updated>
-    </task>
-    <task id="LOCAL-00003" summary="added Javadoc and UML">
-      <option name="closed" value="true" />
-      <created>1714117560476</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1714117560477</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,11 +224,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="update" />
-    <MESSAGE value="Model Test added" />
-    <MESSAGE value="added Javadoc and UML" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Javadoc and UML" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
