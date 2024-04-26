@@ -47,6 +47,10 @@ public class Model extends AbstractModel {
     resetGrid();
   }
 
+  /**
+   * Reset the game grid to a new empty one with the current size.
+   * Each cell in the grid will be dead.
+   */
   private void resetGrid() {
     grid = new Cell[size][size];
     for (int i = 0; i < size; i++) {
@@ -56,6 +60,10 @@ public class Model extends AbstractModel {
     }
   }
 
+  /**
+   * Update the state to the next generation based on the rule.
+   * This method calculates the next state for each cell, checks if the game will reach a win or lose
+   */
   private void updateNextGeneration() {
     // Get the state of the previous generation
     boolean[][] preGridState = toBooleanGrid();
@@ -72,11 +80,25 @@ public class Model extends AbstractModel {
     checkGameResult(preGridState, currentGridState);
   }
 
+  /**
+   * Check the result of the game after updating to the next generation,
+   * Update the game status to WIN if the current generation remains the same as the previous grid,
+   * or LOSE if there is no cell alive.
+   *
+   * @param pre The grid state of the previous generation
+   * @param cur The current state after the next generation updated
+   */
   private void checkGameResult(boolean[][] pre, boolean[][] cur) {
     checkIsLose(cur);
     checkIsWin(pre, cur);
   }
 
+  /**
+   * Check if the game should be updated to WIN status
+   *
+   * @param pre The grid state of the previous generation
+   * @param cur The current state after the next generation updated
+   */
   private void checkIsWin(boolean[][] pre, boolean[][] cur) {
     // Check if the current generation is the same as the previous generation
     for (int i = 0; i < size; i++) {
@@ -89,6 +111,11 @@ public class Model extends AbstractModel {
     status = EStatus.WIN;
   }
 
+  /**
+   * Check if the game should be updated to LOSE status
+   *
+   * @param cur The current state after the next generation updated
+   */
   private void checkIsLose(boolean[][] cur) {
     // Check if there are alive cells in the current generation
     for (int i = 0; i < size; i++) {
@@ -101,6 +128,11 @@ public class Model extends AbstractModel {
     status = EStatus.LOSE;
   }
 
+  /**
+   * Convert the current grid of cells into a 2D boolean array representing status of each cell.
+   *
+   * @return A 2D array representing the status of a cell (true for alive, false for dead).
+   */
   private boolean[][] toBooleanGrid() {
     boolean[][] booleanGrid = new boolean[size][size];
     for (int i = 0; i < size; i++) {

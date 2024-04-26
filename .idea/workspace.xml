@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="GameOfLife_5004Project:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d50f01c9-8d38-4ae6-8204-b6dadd62c042" name="Changes" comment="update">
+    <list default="true" id="d50f01c9-8d38-4ae6-8204-b6dadd62c042" name="Changes" comment="Model Test added">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/GameOfLife_5004Project_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/GameOfLife_5004Project.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/GameOfLife_UML.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOfLife_5004Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GameOfLife_5004Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameOfLife/model/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/model/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/controller/AbstractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/controller/AbstractController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/controller/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/controller/IController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/model/ICell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/model/ICell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/model/IModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/model/IModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameOfLife/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/utils/IObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/utils/IObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife/utils/ISubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOfLife/utils/ISubject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOfLife_UML.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/model/CellTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/model/CellTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/model/ModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/model/ModelTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +62,9 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -61,6 +78,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.CellTest.executor": "Run",
@@ -81,18 +99,23 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "monica",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/MIN/Desktop/GameOfLife_5004Project",
+    "last_opened_file_path": "C:/Users/myeon/IdeaProjects/5004/GameOfLife_5004Project/res",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\myeon\IdeaProjects\5004\GameOfLife_5004Project\res" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="CellTest.testCellWithFourNeighbors" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GameOfLife_5004Project" />
@@ -205,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713922450940</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Model Test added">
+      <option name="closed" value="true" />
+      <created>1714077483563</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714077483564</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,8 +254,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="Model Test added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Model Test added" />
   </component>
 </project>
