@@ -1,11 +1,12 @@
 package GameOfLife.model;
 import GameOfLife.utils.EStatus;
 import GameOfLife.utils.IObserver;
+import GameOfLife.utils.ISubject;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Model extends AbstractModel {
+public class Model implements IModel, ISubject {
   private Cell[][] grid;
   private EStatus status;
   private int time;
@@ -72,7 +73,7 @@ public class Model extends AbstractModel {
     for (int i = 0; i < size; i++) {
       for (int j = 0; j < size; j++) {
         grid[i][j].updateState(i, j, preGridState);
-      }
+aa      }
     }
 
     // Compare previous generation with current generation

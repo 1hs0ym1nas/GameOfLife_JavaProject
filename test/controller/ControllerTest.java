@@ -5,8 +5,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import GameOfLife.controller.AbstractController;
 import GameOfLife.controller.Controller;
+import GameOfLife.controller.IController;
 import GameOfLife.model.IModel;
 import GameOfLife.model.Model;
 import GameOfLife.utils.EStatus;
@@ -15,7 +15,7 @@ import org.junit.Test;
 
 public class ControllerTest {
   private IModel model;
-  private AbstractController controller;
+  private IController controller;
 
   @Before
   public void setUp() {

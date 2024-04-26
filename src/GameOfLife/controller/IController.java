@@ -1,13 +1,15 @@
 package GameOfLife.controller;
 
 import GameOfLife.utils.EStatus;
+import GameOfLife.utils.IObserver;
+import GameOfLife.utils.ISubject;
 
 
 /**
  * Controller handles user interactions and propagates changes to the model.
  */
 
-public interface IController {
+public interface IController extends ISubject, IObserver {
 
   /**
    * Set the current status of the game

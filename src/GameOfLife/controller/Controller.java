@@ -6,7 +6,7 @@ import GameOfLife.model.Model;
 import GameOfLife.utils.IObserver;
 import java.util.ArrayList;
 
-public class Controller extends AbstractController {
+public class Controller implements IController {
   private final IModel model;
   private final ArrayList<IObserver> observers;
 
@@ -16,7 +16,7 @@ public class Controller extends AbstractController {
     model.attach(this);
   }
 
-  public static AbstractController getControllerInstance(IModel model) {
+  public static IController getControllerInstance(IModel model) {
     return new Controller(model);
   }
 

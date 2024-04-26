@@ -1,6 +1,6 @@
 package GameOfLife.view;
 
-import GameOfLife.controller.AbstractController;
+import GameOfLife.controller.IController;
 import GameOfLife.utils.EStatus;
 import GameOfLife.utils.IObserver;
 import java.awt.BorderLayout;
@@ -30,7 +30,7 @@ import javax.swing.event.ChangeListener;
  * View class for the game of life
  */
 public class View implements IObserver {
-  private final AbstractController controller;
+  private final IController controller;
   private static View instance = null;
   private JButton startButton;
   private JButton pauseButton;
@@ -49,7 +49,7 @@ public class View implements IObserver {
    * Constructor for the view
    * @param controller the controller for the game
    */
-  protected View(AbstractController controller) {
+  protected View(IController controller) {
     // Set the controller
     this.controller = controller;
     // Attach the view as observer to the controller
@@ -85,7 +85,7 @@ public class View implements IObserver {
    * @param controller the controller for the game
    * @return the instance of the view
    */
-  public static View getViewInstance(AbstractController controller) {
+  public static View getViewInstance(IController controller) {
     if (instance == null) {
       instance = new View(controller);
     }

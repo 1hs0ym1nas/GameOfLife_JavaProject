@@ -5,8 +5,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import GameOfLife.controller.AbstractController;
 import GameOfLife.controller.Controller;
+import GameOfLife.controller.IController;
 import GameOfLife.model.IModel;
 import GameOfLife.model.Model;
 import GameOfLife.utils.EStatus;
@@ -20,7 +20,7 @@ import org.junit.Test;
 
 public class ViewTest {
   private IModel model;
-  private AbstractController controller;
+  private IController controller;
   private JButton startButton;
   private JButton pauseButton;
   private JButton restartButton;
@@ -146,6 +146,7 @@ public class ViewTest {
     pauseButton.doClick();
     assertFalse(timeSpinner.isEnabled());
     assertFalse(sizeSpinner.isEnabled());
+    restartButton.doClick();
   }
 
   /**
@@ -161,8 +162,8 @@ public class ViewTest {
     assertEquals("5", countDown.getText());
     model.setCellState(1, 1);
     model.setCellState(1, 3);
+    model.setTime(3);
     startButton.doClick();
-    controller.setTime(3);
     sleep(4000);
     assertEquals("1", currentGeneration.getText());
     sleep(4000);
