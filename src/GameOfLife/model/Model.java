@@ -73,7 +73,7 @@ public class Model implements IModel, ISubject {
     for (int i = 0; i < size; i++) {
       for (int j = 0; j < size; j++) {
         grid[i][j].updateState(i, j, preGridState);
-aa      }
+      }
     }
 
     // Compare previous generation with current generation
