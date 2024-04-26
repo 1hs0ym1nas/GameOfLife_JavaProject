@@ -1,4 +1,4 @@
-package test;
+package view;
 
 import static java.lang.Thread.sleep;
 import static org.junit.Assert.assertEquals;
@@ -11,7 +11,6 @@ import GameOfLife.model.IModel;
 import GameOfLife.model.Model;
 import GameOfLife.utils.EStatus;
 import GameOfLife.view.View;
-import java.awt.AWTException;
 import java.lang.reflect.Field;
 import javax.swing.JButton;
 import javax.swing.JLabel;
