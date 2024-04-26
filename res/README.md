@@ -16,10 +16,13 @@ This project is a Java GUI application of this game, which simulates the birth a
 
 ## Getting Started
 
-To run the Primate Sanctuary program: Run the JAR file
+To run the Game of Life program: Run the JAR file
 Ensure you have Java Runtime Environment (JRE) installed on your machine and navigate to the directory containing the GameOfLife_5004Project.jar file (in res/ folder)
-Run the command: java -jar GameOfLife_5004Project.jar
-
+Run the command: 
+```
+java -jar GameOfLife_5004Project.jar
+```
+or run the Main file in the src/ folder directly.
 
 ## Prerequisites
 
